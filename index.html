@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Explore Data Frame</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Explore Data Frame">
+  <meta name="author" content="P. Shyamasunder">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Explore Data Frame</h1>
+    <h2>Shiny App</h2>
+    <p>P. Shyamasunder<br/>Course Project created on Tue Jun 24 03:27:27 2014</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Web interface to &#39;browse&#39; a data frame</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>Query data frame or any of its variables</p></li>
+<li><p>Visualize various types of plots</p></li>
+<li><p>Filter(subset) input data frame as needed to explore</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Query Element</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>Choose to query the entire data frame or any of its variables</p>
+
+<p>Select option from drop down list in sidebar panel</p></li>
+<li><p>Key information is updated in the text window in main panel</p>
+
+<p>Output includes str(), summary(), class of selected variable, etc</p></li>
+<li><p>Choosing &#39;None&#39; (default) causes the text window to show 1 line message</p>
+
+<p>useful to &#39;collapse&#39; the text window to a single line while plotting</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Visualize Plots</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>Use can choose 3 variables for plotting: Y, X and By</p>
+
+<p>The &#39;By&#39; is used to group plot data 
+(example: facets in ggplot or boxplot with a factor variable)</p></li>
+<li><p>Plots dynamically change type based on selection</p>
+
+<p>Selecting only Y variable gives a histogram, Y with By variable shows a 
+boxplot with grouping. Y with X shows a scatter plot.</p></li>
+<li><p>Run statistical functions (where appropriate) to summarize data </p>
+
+<p>Useful to &#39;sum&#39; or &#39;mean&#39; large datasets to understand high level trends
+For example, viewing &#39;Total Emissions&#39; rather than &quot;Emissions&#39; vs year.
+The Total Emissions plot provides more meaning than the scatter plot.
+Choose from &quot;None&quot;, &quot;Sum&quot; or &quot;Mean&quot; options</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Filter Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>Clean Data</p>
+
+<p>Use filters to clean NA records: either for data frame or specific variable</p></li>
+<li><p>Select data rows pertaining to a large set of logical filters</p>
+
+<p>Based on the query information, user can specify filters to drop outliers.
+Or select specific values such as a state code(s)/year(s) for evaluation.
+User can also search for specific strings/names within a variable with ease
+(%in% operator in filter specification uses grepl() output to subset)</p>
+
+<p>Any number of filters can be input: are applied sequentially to dataframe.
+Final reduced data frame is input to query and plot commands.    </p></li>
+<li><p>Feedback on filters input by user</p>
+
+<p>Filters are processed and feedback on list of filters that are valid and 
+invalid is provided so user can take corrective action on input errors.</p>
+
+<p>Text &amp; plots are updated with reduced data set for valid filters.</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Web interface to &#39;browse&#39; a data frame'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Query Element'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Visualize Plots'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Filter Data'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <script src="shared/shiny.js" type="text/javascript"></script>
+  <script src="shared/slider/js/jquery.slider.min.js"></script>
+  <script src="shared/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="shared/slider/css/jquery.slider.min.css"></link>
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
